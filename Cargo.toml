@@ -18,9 +18,6 @@ features = ["spin_no_std"]
 [profile.release]
 #panic = "abort"
 
-[target.'cfg(target_os = "none")']
-runner = "bootimage runner"
-
 [[bin]]
 name = "ZY_os"
 test = true
