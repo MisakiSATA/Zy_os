@@ -1,0 +1,11 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.34s
+     Running unittests src/main.rs (target/x86_64-zy_os/debug/deps/ZY_os-3c9823f8a3c9e2e0)
+Building bootloader
+    Finished `release` profile [optimized + debuginfo] target(s) in 0.36s
+Running: `qemu-system-x86_64 -drive format=raw,file=/home/zyphorix/code/ZY_os/target/x86_64-zy_os/debug/deps/bootimage-ZY_os-3c9823f8a3c9e2e0.bin -no-reboot`
+gtk initialization failed
+error: test failed, to rerun pass `--bin ZY_os`
+
+Caused by:
+  process didn't exit successfully: `bootimage runner /home/zyphorix/code/ZY_os/target/x86_64-zy_os/debug/deps/ZY_os-3c9823f8a3c9e2e0` (exit status: 1)
+note: test exited abnormally; to see the full output pass --no-capture to the harness.

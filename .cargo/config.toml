@@ -7,6 +7,6 @@ build-std = ["core", "compiler_builtins"]
 target = "x86_64-zy_os.json"
 
 
-#[target.'cfg(target_os = "none")']
-#runner = "bootimage runner"
+[target.'cfg(target_os = "none")']
+runner = "bootimage runner"
 # $code/ZY_os/:qemu-system-x86_64 -drive format=raw,file=target/X86_64-zy_os/debug/bootimage-ZY_os.bin -display curses
