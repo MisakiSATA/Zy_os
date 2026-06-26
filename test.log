@@ -1,6 +1,0 @@
-    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.34s
-     Running unittests src/main.rs (target/x86_64-zy_os/debug/deps/ZY_os-3c9823f8a3c9e2e0)
-error: test failed, to rerun pass `--bin ZY_os`
-
-Caused by:
-  process didn't exit successfully: `/home/zyphorix/code/ZY_os/target/x86_64-zy_os/debug/deps/ZY_os-3c9823f8a3c9e2e0` (signal: 11, SIGSEGV: invalid memory reference)
