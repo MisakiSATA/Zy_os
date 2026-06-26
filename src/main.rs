@@ -5,27 +5,21 @@
 
 use core::panic::PanicInfo;
 
-// This function will be called upon a panic
-#[panic_handler]
-fn panic(_info: &PanicInfo) -> ! {
-  loop {}
-}
-
+#[macro_use]
 mod vga_buffer;
 
-#[unsafe(no_mangle)]
-pub extern "C" fn _start() -> ! {
-    use core::fmt::Write;
-    vga_buffer::WRITER
-        .lock()
-        .write_str("Hello again")
-        .unwrap();
-    write!(
-        vga_buffer::WRITER.lock(),
-        ", some numbers: {} {}",
-        42,
-        1.337
-    )
-    .unwrap();
+#[panic_handler]
+fn panic(info: &PanicInfo) -> ! {
+    println!("{}", info);
+    
     loop {}
 }
+
+#[unsafe(no_mangle)]
+pub extern "C" fn _start() {
+    println!("Hello World{}", "!");
+    panic!("Some panic message");
+    
+    loop {}
+}
+
